@@ -1,11 +1,13 @@
 package com.example.calculadoradenotas
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
             if(media >= 6 && faltas <= 10){
                 resultado.setText("O Aluno foi Aprovado\nMédia Final: $media\nFaltas: $faltas")
-                resultado.setTextColor(Color.GREEN)
+                resultado.setTextColor(Color.BLUE)
             }
             else{
                 resultado.setText("O Aluno foi Reprovado\nMédia Final: $media\nFaltas: $faltas")
